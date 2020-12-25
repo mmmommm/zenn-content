@@ -1,5 +1,5 @@
 ---
-title: "フロントエンドの基礎知識について②"
+title: "フロントエンドの基礎知識について②（テスト、polyfill、宣言的UI、バンドルツール）"
 emoji: "😊"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [フロントエンド, Web, 初心者]
