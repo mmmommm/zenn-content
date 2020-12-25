@@ -9,6 +9,7 @@ published: true
 [①](https://zenn.dev/mmomm/articles/525253649e0a227989d9)の続きです。
 こちらの素晴らしい[スクラップ](https://zenn.dev/yamanoku/scraps/632e570e160251839d48)についての記事です。
 [yamanoku](https://zenn.dev/yamanoku)さんありがとうございます。
+今回はテスト、polyfill、babelなど、宣言的UI、バンドルツール編です。
 :::message
 不十分、間違っている部分があれば教えてください
 :::
