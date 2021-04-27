@@ -3,15 +3,15 @@ title: "Lookerまとめ"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Looker]
-published: false
+published: true
 ---
 
 # はじめに
 現在Lookerを使用しているのですがかなり情報が限られており（ほぼ公式？）、自分でまとめたいと思ったのでこの記事を書きます。
 
-# 注意
-公式のドキュメントがかなり充実しているので分かる方はそちらをみた方が良いと思います、省略する部分もあります。
-
+:::message alert
+公式のドキュメントがかなり充実しているので分かる方はそちらをみた方が良いと思います。
+:::
 ## Lookerとは
 [Developers IOの記事](https://dev.classmethod.jp/articles/looker-overview/)がわかりやすいと思います。
 `Redshift`や`BigQuery`からとってきたデータを使用してKPIダッシュボードやレポートなどを作成することができます。
@@ -38,6 +38,17 @@ published: false
 ### lookerの簡単な使い方
 https://training.looker.com/
 という公式の提供しているコースみたいなのがあるので一通りみてみると良いと思います、無料です。
+
+## 用語
+私はBIの分野は初めてだったのですが聞きなれない用語がいくつかあったので初めにまとめて説明します。
+一旦飛ばしてもらってわからなくなった時に参考にしてください。
+
+| 用語 | 説明 | url |
+|--|--|--|
+|dimension|次元や寸法などの意味ですが、新しいデータを分析などで使用する時に新たに追加する定義みたいな感じです。例えば`document_id`のディメンションを追加することでdocument_idをテーブル作成などで使用できるようになります。document_idは`string`だと思いますが、さまざまな型の値を持って来れます。|https://docs.looker.com/ja/reference/field-params/dimension|
+|measure|集計などの意味で、その名の通り特定の条件で一致したものを集計します、集計の種類にはcount(重複あり)、count_distinct(重複なし)があり、例えばユーザーIDなどの一意のものはcount_distinctで集計することでユーザー数を算出出来ます、イベントの実行数などの時はcountを使用します。|https://docs.looker.com/ja/reference/field-params/measure|
+|フィールド|フィールドはディメンションと同様です、データ算出の時に`.view`ファイルに定義したディメンションの名前がフィールドとして表示され、選択することでデータを使用できます、もし変更したい場合は`.view`ファイルでの定義のところで`label`を使用することで変更できます。|https://docs.looker.com/ja/exploring-data/exploring-data|
+|カスタムフィールド|そのデータ算出の時にだけ使いたいフィールドがある時に使用するフィールドです、選択したexploreとそのexploreにjoinされているものの中からディメンション、メジャーを選択して追加できます、よく使うものなら`.view`ファイルに定義しても良いですが、使い捨てなのであればカスタムフィールドを使用すると良いと思います。|https://docs.looker.com/ja/exploring-data/adding-fields/custom-measure|
 
 # ヘッダー
 ヘッダーには `閲覧` `Explore` `開発` の三つがあります。
